@@ -1,0 +1,55 @@
+@using ACTApp.Models.Event
+@model AddEvent
+@{
+    ViewData["Title"] = "Add Event";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white me-2">
+                <i class="mdi mdi-calendar"></i>
+            </span> Add Event
+        </h3>
+    </div>
+    <div class="row">
+        <div class="mt-3 d-grid gap-2" style="width:26%">
+            <a class="btn btn-gradient-primary btn-icon-text" href="@Url.Action("Index", "Event")"><i class="mdi mdi-arrow-left btn-icon-prepend"></i>Back To Lists</a>
+        </div>
+    </div>
+    <div class="col-lg-12 grid-margin stretch-card" style="margin-top:10px;">
+        <div class="card">
+            <div class="card-body">
+                <form class="pt-3" method="post" asp-action="Add" asp-controller="Event">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label>Even Name</label>
+                        <input type="text" asp-for="EventName" class="form-control" placeholder="Event Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" asp-for="StartDate" class="form-control" placeholder="dd/mm/yyyy" value="@DateTime.Today.ToString("yyyy-MM-dd")">
+                    </div>
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" asp-for="EndDate" class="form-control" placeholder="dd/mm/yyyy" value="@DateTime.Today.ToString("yyyy-MM-dd")">
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" asp-for="Location" class="form-control" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select asp-for="Status" class="form-select">
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

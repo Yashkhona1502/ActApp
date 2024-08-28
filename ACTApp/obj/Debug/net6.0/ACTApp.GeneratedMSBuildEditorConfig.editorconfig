@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ACTApp
+build_property.RootNamespace = ACTApp
+build_property.ProjectDir = /Users/yashkhona/Documents/GitHub/ActApp/ACTApp/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = /Users/yashkhona/Documents/GitHub/ActApp/ACTApp
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Accomodation/_Accomodation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb21vZGF0aW9uL19BY2NvbW9kYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Events/_Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRzL19BZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Events/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRzL19FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Events/_Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRzL19FdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Shared/_JsDore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Kc0RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Shared/_navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19uYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Shared/_StylesheetsDore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TdHlsZXNoZWV0c0RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-x22ep5hi2o

@@ -1,0 +1,65 @@
+@using ACTApp.Models.Event
+@model List<AddEvent>
+@{
+    ViewData["Title"] = "Events";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var EventList = Model.ToList();
+}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white me-2">
+                <i class="mdi mdi-calendar"></i>
+            </span> Events
+        </h3>
+    </div>
+    <div class="row">
+        <div class="mt-3 d-grid gap-2" style="width:25%">
+            <a class="btn btn-gradient-primary btn-icon-text" href="@Url.Action("Add", "Event")"><i class="mdi mdi-plus btn-icon-prepend"></i>Create</a>
+        </div>
+    </div>
+    <div class="col-lg-12 grid-margin stretch-card" style="margin-top:10px;">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped" id="tbEvent">
+                    <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>
+                                Event Name
+                            </th>
+                            <th>
+                                Start Date
+                            </th>
+                            <th>
+                                End Date
+                            </th>
+                            <th>
+                                Location
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var items in EventList)
+                        {
+                            <tr>
+                                <td>@items.EventId</td>
+                                <td>@items.EventName</td>
+                                <td>@items.StartDate</td>
+                                <td>@items.EndDate</td>
+                                <td>@items.Location</td>
+                                <td>@items.Status</td>
+                                <td><a class="mdi mdi-pencil" href="@Url.Action("Edit", "Event", new { id = items.EventId })"></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

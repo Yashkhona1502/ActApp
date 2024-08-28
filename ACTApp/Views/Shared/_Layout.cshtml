@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ACTApp</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/ACTApp.styles.css" asp-append-version="true" />*@
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <partial name="~/Views/Shared/_StylesheetsDore.cshtml" />
+    @if (IsSectionDefined("CssSection"))
+        {
+        @RenderSection("CssSection", required: false);
+        }
+    @RenderSection("Css", required: false);
+</head>
+<body>
+    <div class="container-scroller">
+        
+        <!-- partial:partials/_navbar.html -->
+        <partial name="~/Views/Shared/_navbar.cshtml" />
+        <!--_navbar ends -->
+        
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item nav-profile">
+                        <a href="#" class="nav-link">
+                            <div class="nav-profile-image">
+                                <img src="../assets/images/faces/face1.jpg" alt="profile" />
+                                <span class="login-status online"></span>
+                                <!--change to offline or busy as needed-->
+                            </div>
+                            <div class="nav-profile-text d-flex flex-column">
+                                <span class="font-weight-bold mb-2">David Grey. H</span>
+                                <span class="text-secondary text-small">Project Manager</span>
+                            </div>
+                            <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="mdi mdi-home menu-icon"></i>
+                        </a>
+                    </li>
+                    @*<li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Basic UI Elements</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">Icons</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+            <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/icons/font-awesome.html">Font Awesome</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
+                <span class="menu-title">Forms</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+            <div class="collapse" id="forms">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/forms/basic_elements.html">Form Elements</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                <span class="menu-title">Charts</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+            </a>
+            <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a>
+                    </li>
+                </ul>
+            </div>
+        </li>*@
+                    @*<li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                            <span class="menu-title">Tables</span>
+                            <i class="mdi mdi-table-large menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="tables">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>*@
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#GeneralManagement" aria-expanded="false" aria-controls="tables">
+                            <span class="menu-title">General Management</span>
+                            <i class="mdi mdi-file menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="GeneralManagement">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link " href="@Url.Action("Index", "Event")">Event <i class="mdi mdi-calendar menu-icon"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link " href="@Url.Action("Index","Accomodation")">Accommodation <i class="mdi mdi-bed menu-icon"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Transport <i class="mdi mdi-train-car menu-icon"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Catering <i class="mdi mdi-chef-hat menu-icon"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#Operations" aria-expanded="false" aria-controls="tables">
+                            <span class="menu-title">Operations</span>
+                            <i class="mdi mdi-cogs menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="Operations">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Accomodation Registry <i class="mdi mdi-bed menu-icon" style="margin-left:5px"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Transportation Routing <i class="mdi mdi-train-car menu-icon" style="margin-left:5px"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Meal <i class="mdi mdi-chef-hat menu-icon" style="margin-left:108px"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#Reporting" aria-expanded="false" aria-controls="tables">
+                            <span class="menu-title">Reporting</span>
+                            <i class="mdi mdi-chart-bar menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="Reporting">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#Account" aria-expanded="false" aria-controls="tables">
+                            <span class="menu-title">Account</span>
+                            <i class="mdi mdi-account menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="Account">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Change Password <i class="mdi mdi-lock menu-icon" style="margin-left:31px"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">User Info <i class="mdi mdi-account-edit menu-icon" style="margin-left:84px"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Logout <i class="mdi mdi-logout menu-icon" style="margin-left:98px"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    @*<li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-title">User Pages</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-lock menu-icon"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/samples/login.html"> Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/samples/register.html"> Register </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="docs/documentation.html" target="_blank">
+                <span class="menu-title">Documentation</span>
+                <i class="mdi mdi-file-document-box menu-icon"></i>
+            </a>
+        </li>*@
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="container">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © @DateTime.Now.Year . All rights reserved.</span>
+                        <a href="https://sglobalacumen.com/" target="_blank">SGlobalAcumen</a>
+                        @*<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>*@
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+        </div>
+    </div>
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>*@
+    <partial name="~/Views/Shared/_JsDore.cshtml" />
+    @if (IsSectionDefined("JSSection"))
+    {
+        @RenderSection("JSSection", required: false)
+    }
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{46545F83-2D59-4484-BA23-5844F3E1A3EC}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <Breakpoint file="/Users/yashkhona/Projects/ACTApp/ACTApp/Controllers/AccomodationController.cs" relfile="Controllers/AccomodationController.cs" line="54" column="1" />
+    <Breakpoint file="/Users/yashkhona/Projects/ACTApp/ACTApp/Controllers/AccomodationController.cs" relfile="Controllers/AccomodationController.cs" line="47" column="1" />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ACTApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccomodationController.cs">
+    <Files>
+      <File FileName="Views/Accomodation/_Accomodation.cshtml" Line="23" Column="93" IsPinned="True" />
+      <File FileName="Views/Shared/_JsDore.cshtml" Line="19" Column="25" IsPinned="True" />
+      <File FileName="Controllers/AccomodationController.cs" Line="51" Column="33" IsPinned="True" />
+      <File FileName="wwwroot/js/common.js" Line="2" Column="41" IsPinned="True" />
+      <File FileName="Models/FileUploadModel.cs" Line="9" Column="26" IsPinned="True" />
+      <File FileName="Interfaces/IEvent.cs" />
+      <File FileName="Controllers/EventController.cs" />
+      <File FileName="Models/Event/AddEvent.cs" />
+      <File FileName="Controllers/AccountController.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Views/Events/_Add.cshtml" />
+      <File FileName="Repository/Event/EventRepo.cs" Line="63" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ACTApp" expanded="True">
+            <Node name="ACTApp" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="AccomodationController.cs" selected="True" />
+              </Node>
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Event" expanded="True" />
+              </Node>
+              <Node name="Repository" expanded="True">
+                <Node name="Event" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Accomodation" expanded="True" />
+                <Node name="Events" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
