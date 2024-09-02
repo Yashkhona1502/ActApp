@@ -1,4 +1,47 @@
 ﻿<Properties StartupConfiguration="{9C5D5B41-926C-4B8E-8A67-D4768704D4D5}|Default" GitUserInfo="UsingGIT">
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ACTApp/Controllers/AccomodationController.cs">
+    <Files>
+      <File FileName="ACTApp/Repository/Event/EventRepo.cs" Line="2" Column="1" IsPinned="True" />
+      <File FileName="ACTApp/Models/Event/AddEvent.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="ACTApp/Controllers/AccomodationController.cs" Line="69" Column="1" IsPinned="True" />
+      <File FileName="ACTApp/Models/DataContext/DataContext.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="ACTApp/Repository/Hotel/HotelRepo.cs" Line="11" Column="36" IsPinned="True" />
+      <File FileName="ACTApp/Views/Accomodation/_Accomodation.cshtml" Line="20" Column="54" IsPinned="True" />
+      <File FileName="ACTApp/Interfaces/IEvent.cs" Line="1" Column="1" />
+      <File FileName="ACTApp/Interfaces/IHotel.cs" Line="8" Column="51" />
+      <File FileName="ACTApp/Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="ACTApp/Program.cs" Line="5" Column="31" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ACTApp">
+            <Node name="ACTApp">
+              <Node name="Controllers">
+                <Node name="AccomodationController.cs" selected="True" />
+              </Node>
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="Event" expanded="True" />
+                <Node name="Hotel" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Accomodation" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.ACTApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/yashkhona/Documents/GitHub/ActApp/ACTApp/Controllers/AccomodationController.cs" relfile="ACTApp/Controllers/AccomodationController.cs" line="61" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

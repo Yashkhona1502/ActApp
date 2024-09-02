@@ -34,6 +34,7 @@
     <Folder Include="Models\Event\" />
     <Folder Include="Repository\Event\" />
     <Folder Include="wwwroot\assets\" />
+    <Folder Include="Repository\Hotel\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Account\" />
@@ -43,5 +44,6 @@
     <None Remove="Repository\UserIdentity\" />
     <None Remove="Models\DataContext\" />
     <None Remove="Views\Accomodation\" />
+    <None Remove="Repository\Hotel\" />
   </ItemGroup>
 </Project>
