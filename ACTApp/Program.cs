@@ -2,6 +2,7 @@
 using ACTApp.Models.DataContext;
 using ACTApp.Repository.Event;
 using ACTApp.Repository.UserIdentity;
+using ACTApp.Repository.Hotel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +24,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddTransient<IUserIdentity, UserIdentityRepo>();
 
 builder.Services.AddTransient<IEvent, EventRepo>();
+
+builder.Services.AddTransient<IHotel, HotelRepo>();
 
 var app = builder.Build();
 

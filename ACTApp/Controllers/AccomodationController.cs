@@ -16,10 +16,12 @@ namespace ACTApp.Controllers
     public class AccomodationController : Controller
     {
         private readonly IEvent @event;
+        private readonly IHotel @hotel;
 
-        public AccomodationController(IEvent @event)
+        public AccomodationController(IEvent @event, IHotel @hotel)
         {
             this.@event = @event;
+            this.@hotel = @hotel;
         }
         // GET: /<controller>/
         public IActionResult Index()
@@ -48,10 +50,15 @@ namespace ACTApp.Controllers
                                 {
                                     c.FirstRowIsColumnNames = true;
                                 });
-                                var tbl = table;
                             }
                         }
                     }
+                    table.Columns.Add("EventID");
+                    for(int i = 0; i < table.Rows.Count; i++)
+                    {
+                        table.Rows[i]["EventID"] = Request.Form["EventList"].ToString();
+                    }
+                    @hotel.AddHotelList(table);
                 }
             }
             catch(Exception ex)
