@@ -8,6 +8,8 @@ using ACTApp.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
 using OfficeOpenXml;
+using ACTApp.Models;
+using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -26,8 +28,9 @@ namespace ACTApp.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewBag.EventList = new SelectList(@event.GetEventForDropDown().ToList(),"EventId", "EventName");
-            return View("~/Views/Accomodation/_Accomodation.cshtml");
+            ViewBag.EventList = new SelectList(@event.GetEventForDropDown().ToList(), "EventId", "EventName");
+            var hotelList = new HotelModel();
+            return View("~/Views/Accomodation/_Accomodation.cshtml", hotelList);
         }
         [HttpPost]
         public IActionResult ImportExcel(FileUploadModel fileUpload)
@@ -35,14 +38,14 @@ namespace ACTApp.Controllers
             DataTable table = new DataTable();
             try
             {
-                if(fileUpload.File != null)
+                if (fileUpload.File != null)
                 {
                     using (var stream = fileUpload.File.OpenReadStream())
                     {
                         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
                         ExcelPackage package = new ExcelPackage();
                         package.Load(stream);
-                        if(package.Workbook.Worksheets.Count > 0)
+                        if (package.Workbook.Worksheets.Count > 0)
                         {
                             using (ExcelWorksheet workSheet = package.Workbook.Worksheets.First())
                             {
@@ -54,18 +57,38 @@ namespace ACTApp.Controllers
                         }
                     }
                     table.Columns.Add("EventID");
-                    for(int i = 0; i < table.Rows.Count; i++)
+                    for (int i = 0; i < table.Rows.Count; i++)
                     {
                         table.Rows[i]["EventID"] = Request.Form["EventList"].ToString();
                     }
                     @hotel.AddHotelList(table);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ViewBag.ErrorMessage = ex.Message;
             }
-            return null;
+            return View("~/Views/Accomodation/_Accomodation.cshtml");
+        }
+        [HttpPost]
+        public IActionResult GetHotelList(int eventId)
+        {
+            if (eventId != 0)
+            {
+                var hotelList = hotel.GetHotelList(eventId);
+                return Json(hotelList);
+            }
+            else
+            {
+                return Json(new { Error = "" });
+                //return View("~/Views/Accomodation/_Accomodation.cshtml", hotelObj);
+            }
+        }
+        [HttpPost]
+        public ActionResult GetHotelListView([FromBody]List<AccommodationModel> hotelModel)
+        {
+            string json = JsonConvert.SerializeObject(hotelModel);
+            return Content(json, "application/json");
         }
     }
 }

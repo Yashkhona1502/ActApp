@@ -1,0 +1,56 @@
+﻿<div id="hotel-list" style="overflow: auto;">
+    @* <table class="table table-striped" id="tbHotel"> *@
+        @* <thead>
+            <tr>
+                <th>ID</th>
+                <th>Hotel Name</th>
+                <th>
+                    Total Room
+                </th>
+                <th>
+                    Location
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    State
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Postal Code
+                </th>
+                <th>
+                    Street Address
+                </th>
+                <th>
+                    Cluster Name
+                </th>
+                <th>Event ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (hotelList.Count > 0)
+            {
+                @foreach (var items in hotelList)
+                {
+                    <tr>
+                        <td>@items.ID</td>
+                        <td>@items.HotelName</td>
+                        <td>@items.TotalRoom</td>
+                        <td>@items.Location</td>
+                        <td>@items.City</td>
+                        <td>@items.State</td>
+                        <td>@items.Country</td>
+                        <td>@items.PostalCode</td>
+                        <td>@items.StreetAddress</td>
+                        <td>@items.ClusterName</td>
+                        <td>@items.EventId</td>
+                    </tr>
+                }
+            }
+        </tbody> *@
+    @* </table> *@
+</div>

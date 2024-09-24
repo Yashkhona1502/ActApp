@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACTApp.Models;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ACTApp.Models

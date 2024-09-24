@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/ACTApp
+/ACTApp/obj/Debug/net6.0/ACTApp.AssemblyInfo.cs
+/ACTApp/Program.cs
+/ACTApp/obj/Debug/net6.0/ACTApp.AssemblyInfoInputs.cache

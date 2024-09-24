@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using ACTApp.Models.Account;
 using ACTApp.Models.Event;
+using ACTApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ACTApp.Models.DataContext
@@ -15,6 +16,8 @@ namespace ACTApp.Models.DataContext
 		public DbSet<AppUser> tb_Register { get; set; }
 
 		public DbSet<AddEvent> tb_Event { get; set; }
+
+		public DbSet<AccommodationModel> tb_Hotel { get; set; }
 	}
 }
 
