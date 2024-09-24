@@ -28,14 +28,15 @@ namespace ACTApp.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            ViewBag.EventList = "";
             ViewBag.EventList = new SelectList(@event.GetEventForDropDown().ToList(), "EventId", "EventName");
-            var hotelList = new HotelModel();
-            return View("~/Views/Accomodation/_Accomodation.cshtml", hotelList);
+            return View("~/Views/Accomodation/_Accomodation.cshtml");
         }
         [HttpPost]
         public IActionResult ImportExcel(FileUploadModel fileUpload)
         {
             DataTable table = new DataTable();
+            ViewBag.EventList = "";
             try
             {
                 if (fileUpload.File != null)
@@ -55,6 +56,7 @@ namespace ACTApp.Controllers
                                 });
                             }
                         }
+                        stream.Dispose();
                     }
                     table.Columns.Add("EventID");
                     for (int i = 0; i < table.Rows.Count; i++)
@@ -62,13 +64,15 @@ namespace ACTApp.Controllers
                         table.Rows[i]["EventID"] = Request.Form["EventList"].ToString();
                     }
                     @hotel.AddHotelList(table);
+                    ViewBag.EventList = new SelectList(@event.GetEventForDropDown().ToList(), "EventId", "EventName");
+                    TempData["AlertSuccessMessage"] = "Sucessfully Saved";
                 }
             }
             catch (Exception ex)
             {
-                ViewBag.ErrorMessage = ex.Message;
+                TempData["AlertErrorMessage"] = "Error! Failed to load data";
             }
-            return View("~/Views/Accomodation/_Accomodation.cshtml");
+            return RedirectToAction("Index", "Accomodation");
         }
         [HttpPost]
         public IActionResult GetHotelList(int eventId)
@@ -81,7 +85,6 @@ namespace ACTApp.Controllers
             else
             {
                 return Json(new { Error = "" });
-                //return View("~/Views/Accomodation/_Accomodation.cshtml", hotelObj);
             }
         }
         [HttpPost]
